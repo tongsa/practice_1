@@ -1,22 +1,26 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <HelloWorld msg="这是从父组件过来的信息"/> -->
-     <Aside></Aside>
-
-
-
+    <HelloWorld msg= '' />
+    {{ count }}
   </div>
 </template>
 
 <script>
-import Aside from './components/aside.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Aside
-  }
-}
+    HelloWorld,
+  },
+  computed: {
+    count() {
+      return this.$store.state.count;
+    },
+   
+  },
+};
 </script>
 
 <style>

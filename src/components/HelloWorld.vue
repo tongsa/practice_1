@@ -1,32 +1,35 @@
 <template>
-<div>
-  {{msg}}
-</div>
+  <div>
+    {{ msg }}
+    <el-button type="primary" @click="increment()">ADD</el-button>
+    <el-button type="primary" @click="reduce()">DEL</el-button>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String
+    msg: String,
     //接收父组件传过来的数值
   },
-  data(){
-    return{
-    }
+  data() {
+    return {};
   },
-  computed:{
-  
+  computed: {},
+  created() {},
+  methods: {
+    increment() {
+      this.$store.commit("increment");
+    },
+    reduce() {
+      this.$store.commit("reduce");
+      // console.log(this.$store.state.count);
+    },
   },
-  created(){
-  
-  },
-  beforeDestroy(){
-
-  }
-  }
+  beforeDestroy() {},
+};
 </script>
 
 <style scoped>
-
 </style>
