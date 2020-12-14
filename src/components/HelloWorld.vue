@@ -24,8 +24,8 @@ export default {
     },
     reduce() {
       this.$store.commit("reduce");
-      // console.log(this.$store.state.count);
     },
+    
   },
   beforeDestroy() {},
 };

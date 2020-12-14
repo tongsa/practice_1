@@ -1,25 +1,14 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <HelloWorld msg= '' />
-    {{ count }}
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
-  computed: {
-    count() {
-      return this.$store.state.count;
-    },
-   
-  },
+  components: {},
+  computed: {},
 };
 </script>
 
